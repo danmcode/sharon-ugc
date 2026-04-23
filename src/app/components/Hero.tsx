@@ -1,5 +1,6 @@
 "use client";
 
+import { HeroDesktopVersion } from "./Hero/HeroDesktopVersion";
 import { HeroMobileVersion } from "./Hero/HeroMobileVersion";
 
 export default function HeroUGC() {
@@ -18,7 +19,7 @@ export default function HeroUGC() {
                 </div>
 
                 <div className="hidden md:block">
-                    Desktop version
+                    <HeroDesktopVersion />
                 </div>
             </div>
         </section >
