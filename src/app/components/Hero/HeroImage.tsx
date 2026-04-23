@@ -7,16 +7,15 @@ export const HeroImage = () => {
         <div className="relative w-[320px] md:w-120 aspect-3/4">
             <div className="
                     absolute 
-                    bottom-[10%] 
-                    left-1/2 
-                    -translate-x-1/2 
-                    w-62.5 
-                    h-62.5 
-                    md:w-100 
-                    md:h-100
+                    bottom-[0%] 
+                    rotate-8
+                    w-100 
+                    h-100 
+                    md:w-100
+                    md:h-125
                      bg-pink-400/40 
-                     rounded-full 
-                     blur-[80px] 
+                     rounded-3xl
+                     blur-[60px] 
                      z-0"
             />
 
@@ -29,6 +28,7 @@ export const HeroImage = () => {
                     alt="Sharon"
                     width={500}
                     height={500}
+                    loading="eager"
                     className="w-80 md:w-500 lg:w-500 h-auto"
                 />
             </motion.div>
@@ -43,21 +43,23 @@ export const HeroImage = () => {
                     alt=""
                     width={80}
                     height={80}
-                    className="-rotate-12 drop-shadow-xl"
+                    loading="eager"
+                    className="-rotate-12 drop-shadow-xl w-auto h-auto"
                 />
             </motion.div>
 
             {/* Avene */}
             <motion.div
                 {...fadeUp(0.5)}
-                className="absolute top-[15%] right-[30%]"
+                className="absolute top-[20%] right-[30%]"
             >
                 <Image
                     src="/images/avene.png"
                     alt=""
                     width={45}
                     height={45}
-                    className="rotate-12 drop-shadow-xl"
+                    loading="eager"
+                    className="rotate-12 drop-shadow-xl w-auto h-auto"
                 />
             </motion.div>
 
@@ -71,7 +73,8 @@ export const HeroImage = () => {
                     alt=""
                     width={70}
                     height={70}
-                    className="rotate-6 drop-shadow-xl"
+                    loading="eager"
+                    className="w-auto h-auto"
                 />
             </motion.div>
 
@@ -86,7 +89,8 @@ export const HeroImage = () => {
                     alt=""
                     width={90}
                     height={90}
-                    className="rotate-12 drop-shadow-xl"
+                    loading="eager"
+                    className="rotate-12 drop-shadow-xl w-auto h-auto"
                 />
             </motion.div>
 

@@ -6,14 +6,13 @@ import { HeroMobileVersion } from "./Hero/HeroMobileVersion";
 export default function HeroUGC() {
     return (
         <section className="
-            relative w-full 
+            relative 
+            w-full 
             min-h-screen 
             bg-[#f4ebe1] 
-            overflow-hidden 
-            flex 
-            flex-col
+            overflow-hidden
         ">
-            <div className="relative">
+            <div className="relative z-10">
                 <div className="block md:hidden">
                     <HeroMobileVersion />
                 </div>
@@ -22,6 +21,6 @@ export default function HeroUGC() {
                     <HeroDesktopVersion />
                 </div>
             </div>
-        </section >
+        </section>
     );
 }
