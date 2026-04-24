@@ -2,6 +2,7 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import Hero from "./components/Hero";
+import { MenuPage } from "./components/Menu/MenuPage";
 import { Services } from "./components/Services";
 
 export default function Home() {
@@ -11,6 +12,10 @@ export default function Home() {
 
       <section id="hero" className="snap-start h-screen">
         <Hero />
+      </section>
+
+      <section id="menu" className="snap-start h-screen">
+        <MenuPage />
       </section>
 
       <section id="about" className="snap-start h-screen">
