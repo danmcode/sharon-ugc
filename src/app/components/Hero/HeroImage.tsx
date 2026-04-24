@@ -29,7 +29,7 @@ export const HeroImage = () => {
                     width={500}
                     height={500}
                     loading="eager"
-                    className="w-80 md:w-500 lg:w-500 h-auto"
+                    className="w-80 md:w-500 h-auto"
                 />
             </motion.div>
 
@@ -44,7 +44,7 @@ export const HeroImage = () => {
                     width={80}
                     height={80}
                     loading="eager"
-                    className="-rotate-12 drop-shadow-xl w-auto h-auto"
+                    className="w-20 md:w-25 -rotate-12 drop-shadow-xl h-auto"
                 />
             </motion.div>
 
@@ -59,7 +59,7 @@ export const HeroImage = () => {
                     width={45}
                     height={45}
                     loading="eager"
-                    className="rotate-12 drop-shadow-xl w-auto h-auto"
+                    className="w-10 md:w-12 rotate-12 drop-shadow-xl h-auto"
                 />
             </motion.div>
 
@@ -74,7 +74,7 @@ export const HeroImage = () => {
                     width={70}
                     height={70}
                     loading="eager"
-                    className="w-auto h-auto"
+                    className="w-16 md:w-20 h-auto"
                 />
             </motion.div>
 
@@ -90,7 +90,7 @@ export const HeroImage = () => {
                     width={90}
                     height={90}
                     loading="eager"
-                    className="rotate-12 drop-shadow-xl w-auto h-auto"
+                    className="w-15 md:w-25 rotate-12 drop-shadow-xl h-auto"
                 />
             </motion.div>
 

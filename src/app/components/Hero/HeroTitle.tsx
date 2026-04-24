@@ -4,7 +4,7 @@ import { HeroSocialButtons } from "./HeroSocialButtons";
 
 export const HeroTitle = () => {
     return (
-        <div className="flex flex-col min-h-screen
+        <div className="flex flex-col md:min-h-screen
             ">
             <motion.h1
                 {...fadeUp(0.2)}
