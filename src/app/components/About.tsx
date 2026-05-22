@@ -1,5 +1,6 @@
-import React from 'react'
-import Image from 'next/image'
+import Image from "next/image";
+import sharonBeauty from "../../../public/images/sharon_ugc_beauty.png";
+import sharonUGCDiploma from "../../../public/images/sharon_ugc_diploma.jpg";
 
 export const About = () => {
 
@@ -8,7 +9,6 @@ export const About = () => {
         <section className="bg-[#F7F2EB] h-full flex items-center py-4 px-6 md:px-12 lg:px-20 text-[#332A25] overflow-hidden">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
 
-                {/* COLUMNA IZQUIERDA: TEXTO DEPURADO Y JERARQUIZADO */}
                 <div className="lg:col-span-6 space-y-4 md:space-y-6">
                     <div className="space-y-3">
                         <span className="text-sm font-semibold tracking-widest uppercase text-[#E05297]">
@@ -19,7 +19,6 @@ export const About = () => {
                         </h2>
                     </div>
 
-                    {/* El gran gancho de su perfil */}
                     <p className="text-lg md:text-xl font-serif italic text-[#E05297] leading-relaxed">
                         "Soy contadora de profesión, pero creativa por vocación."
                     </p>
@@ -39,7 +38,6 @@ export const About = () => {
                     </div>
                 </div>
 
-                {/* COLUMNA DERECHA: COMPOSICIÓN VISUAL ESTILO COLLAGE LIMPIO */}
                 <div className="hidden lg:flex lg:col-span-6 flex-col items-center justify-center relative min-h-[320px] md:min-h-[420px]">
 
                     {/* Mancha decorativa sutil de fondo para dar profundidad sin ensuciar */}
@@ -48,22 +46,25 @@ export const About = () => {
                     {/* FOTO 1: La Polaroid Principal (Sharon con su Diploma) */}
                     <div className="absolute z-30 top-0 right-4 md:right-12 transform rotate-3 bg-white p-3 pb-10 rounded-xl shadow-xl border border-gray-100 max-w-[180px] md:max-w-[220px] hover:rotate-0 hover:scale-105 transition-all duration-300">
                         <div className="aspect-[3/4] overflow-hidden rounded-lg bg-gray-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80"
-                                alt="Sharon recibiendo diploma"
+                            <video
+                                src="https://sharonpaniquitacreadorac.my.canva.site/_assets/video/1a6d38e95f9bc7e6c2e91456ed65becb.mp4"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
                                 className="w-full h-full object-cover"
                             />
                         </div>
                         <span className="absolute bottom-3 left-0 right-0 text-center font-serif font-bold text-xl text-[#E05297] tracking-wider">
-                            ¡HOLA! ✨
+                            ¡Sobre Mi! ✨
                         </span>
                     </div>
 
                     {/* FOTO 2: Recorte o foto casual izquierda (Superpuesta por debajo) */}
                     <div className="absolute z-20 bottom-12 left-4 md:left-12 transform -rotate-6 bg-white p-2 pb-6 rounded-xl shadow-lg border border-gray-100 max-w-[140px] md:max-w-[180px] hover:rotate-0 hover:scale-105 transition-all duration-300">
                         <div className="aspect-[4/5] overflow-hidden rounded-lg bg-gray-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+                            <Image
+                                src={sharonBeauty}
                                 alt="Sharon retrato casual"
                                 className="w-full h-full object-cover"
                             />
@@ -73,7 +74,11 @@ export const About = () => {
                     {/* FOTO 3: El diploma de CapCut en formato limpio (Opcional o interactivo) */}
                     <div className="absolute z-10 top-24 left-0 md:left-8 transform -rotate-12 bg-white p-2 rounded-lg shadow-md border border-[#E8DFD5] max-w-[160px] opacity-80 hover:opacity-100 hover:rotate-0 transition-all duration-300">
                         <div className="aspect-[4/3] overflow-hidden rounded bg-gray-50">
-                            {/* Aquí pones la foto del diploma recortada sin el fondo de corcho */}
+                            <Image
+                                src={sharonUGCDiploma}
+                                alt="Sharon retrato casual"
+                                className="w-full h-full object-cover"
+                            />
                             <div className="w-full h-full flex items-center justify-center bg-[#332A25] text-white p-2 text-[10px] font-mono text-center">
                                 [ Certificación CapCut Intermedio ]
                             </div>

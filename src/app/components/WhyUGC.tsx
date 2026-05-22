@@ -1,4 +1,6 @@
-import React from 'react'
+import Image from "next/image";
+import profilePic from "../../../public/images/profile_photo.jpeg";
+import sharonUgcUnboxing from "../../../public/images/sharon_ugc_unboxing.jpg";
 
 export const WhyUGC = () => {
     const stats = [
@@ -20,7 +22,6 @@ export const WhyUGC = () => {
         <section className="bg-[#F7F2EB] h-full flex items-center py-4 px-6 md:px-12 lg:px-20 text-[#332A25] overflow-hidden">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-center">
 
-                {/* COLUMNA IZQUIERDA: TEXTO Y CONTENIDO */}
                 <div className="lg:col-span-7 space-y-4 md:space-y-6">
                     <div className="space-y-4">
                         <span className="text-sm font-semibold tracking-widest uppercase text-[#E05297]">
@@ -39,7 +40,6 @@ export const WhyUGC = () => {
                         </span>
                     </p>
 
-                    {/* CONTENEDOR DE ESTADÍSTICAS (BENTO STYLE) */}
                     <div className="grid grid-cols-3 gap-2 md:gap-4 pt-3 md:pt-4">
                         {stats.map((stat, index) => (
                             <div
@@ -56,31 +56,24 @@ export const WhyUGC = () => {
                         ))}
                     </div>
 
-                    {/* FUENTES */}
                     <p className="text-xs text-[#8A7A71] italic pt-2">
                         Fuentes: Nielsen Global Report, Stackla Consumer Review & SocialMedia.org
                     </p>
                 </div>
 
-                {/* COLUMNA DERECHA: MOCKUP DE VIDEO (EL PRODUCTO) */}
                 <div className="hidden lg:flex lg:col-span-5 justify-center relative">
-                    {/* Elementos decorativos flotantes de fondo */}
                     <div className="absolute w-72 h-72 bg-[#E05297]/10 rounded-full blur-3xl -top-10 -left-10 z-0 animate-pulse" />
                     <div className="absolute w-60 h-60 bg-[#F1A7C4]/20 rounded-full blur-3xl -bottom-10 -right-10 z-0" />
 
-                    {/* Contenedor del Teléfono / Video */}
                     <div className="relative z-10 w-full max-w-[220px] md:max-w-[260px] aspect-[9/16] bg-[#1A1A1A] rounded-[40px] shadow-2xl border-[10px] border-[#332A25] overflow-hidden group">
-                        {/* Cámara/Notch simulado */}
                         <div className="absolute top-0 inset-x-0 h-6 flex justify-center items-center z-30">
                             <div className="w-24 h-4 bg-[#332A25] rounded-b-xl" />
                         </div>
 
-                        {/* Aquí iría el componente de Video real o un placeholder interactivo */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-20 pointer-events-none" />
 
-                        {/* Imagen/Video de la creadora (Reemplazar src por video real) */}
-                        <img
-                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+                        <Image
+                            src={sharonUgcUnboxing}
                             alt="Creadora de contenido UGC en acción"
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
@@ -88,8 +81,14 @@ export const WhyUGC = () => {
                         {/* Interfaz Simulada de Red Social */}
                         <div className="absolute bottom-6 left-4 right-4 z-20 text-white space-y-2">
                             <div className="flex items-center gap-2">
-                                <div className="w-8 h-8 rounded-full bg-white/40 backdrop-blur-sm border border-white" />
-                                <span className="text-xs font-semibold">@creadora_ugc</span>
+                                <Image
+                                    src={profilePic}
+                                    alt="Sharon Paniquita"
+                                    width={32}
+                                    height={32}
+                                    className="w-8 h-8 rounded-full object-cover border border-white shrink-0"
+                                />
+                                <span className="text-xs font-semibold">@ssharon.paniquita</span>
                             </div>
                             <p className="text-[11px] text-gray-200 line-clamp-2">
                                 Creando conexiones reales que convierten más que cualquier anuncio tradicional. ✨ #ugccreator #marketing

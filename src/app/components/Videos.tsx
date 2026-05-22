@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+import Image from 'next/image';
+import { useState } from 'react';
+import profilePic from "../../../public/images/profile_photo.jpeg";
 
-// Tipado para estructurar los datos de cada nicho
 interface VideoProject {
     title: string;
     videoUrl: string;
@@ -24,38 +25,37 @@ interface NicheData {
 export const Videos = () => {
     const [activeNiche, setActiveNiche] = useState<NicheData | null>(null);
 
-    // Datos estructurados basados en tus imágenes (corrigiendo "Beauty")
     const niches: NicheData[] = [
         {
             id: 'beauty',
             title: 'Beauty, Unboxing & Skincare',
             tagline: 'Rutinas, reseñas de productos y estética limpia.',
-            bgImage: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80',
+            bgImage: '/images/sharon_ugc_beauty.png',
             metrics: { views: '25.4K', likes: '1.2K', interactions: '+45%' },
             videos: [
-                { title: 'Unboxing', videoUrl: 'https://sharonpaniquitacreadorac.my.canva.site/_assets/video/5437a07e99021597e4624219b6fee794.mp4', thumbnail: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80' },
-                { title: 'Make UP', videoUrl: '#', thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80' },
-                { title: 'Skin Care', videoUrl: '#', thumbnail: 'https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&w=400&q=80' },
+                { title: 'Unboxing', videoUrl: 'https://sharonpaniquitacreadorac.my.canva.site/_assets/video/5437a07e99021597e4624219b6fee794.mp4', thumbnail: '/images/sharon_ugc_unboxing.jpg' },
+                { title: 'Make UP', videoUrl: '#', thumbnail: '/images/makeup_valentines_day_image.jpg' },
+                { title: 'Skin Care', videoUrl: '#', thumbnail: '/images/sharon_ugc_skincare.jpg' },
             ]
         },
         {
             id: 'lifestyle',
             title: 'Lifestyle & Storytelling',
             tagline: 'Vlogs dinámicos y conexiones cotidianas reales.',
-            bgImage: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80',
+            bgImage: '/images/sharon_ugc_mini_vlog.jpg',
             metrics: { views: '17.8K', likes: '847', interactions: '+32%' },
             videos: [
-                { title: 'Mini Vlog', videoUrl: '#', thumbnail: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80' }
+                { title: 'Mini Vlog', videoUrl: '#', thumbnail: '/images/sharon_ugc_mini_vlog.jpg' }
             ]
         },
         {
             id: 'travel',
             title: 'Viajes & Reseñas de Comida',
             tagline: 'Experiencias visuales, spots gastronómicos y aventura.',
-            bgImage: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
+            bgImage: '/images/sharon_ugc_viajes.jpg',
             metrics: { views: '42.1K', likes: '3.1K', interactions: '+58%' },
             videos: [
-                { title: 'Food Review', videoUrl: '#', thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80' }
+                { title: 'Food Review', videoUrl: '#', thumbnail: '/images/sharon_ugc_resenas.jpg' }
             ]
         }
     ];
@@ -183,8 +183,14 @@ export const Videos = () => {
                                                         </div>
                                                         <div className="absolute bottom-4 left-3 right-3 z-20 text-white space-y-1">
                                                             <div className="flex items-center gap-1.5">
-                                                                <div className="w-6 h-6 rounded-full bg-white/40 backdrop-blur-sm border border-white shrink-0" />
-                                                                <span className="text-[11px] font-semibold">@sharonpaniquita</span>
+                                                                <Image
+                                                                    src={profilePic}
+                                                                    alt="Sharon Paniquita"
+                                                                    width={32}
+                                                                    height={32}
+                                                                    className="w-8 h-8 rounded-full object-cover border border-white shrink-0"
+                                                                />
+                                                                <span className="text-[11px] font-semibold">@ssharon.paniquita</span>
                                                             </div>
                                                             <p className="text-[10px] text-gray-200 line-clamp-2">{video.title} ✨ #ugccreator</p>
                                                         </div>
