@@ -2,7 +2,6 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import { MenuPage } from "./components/Menu/MenuPage";
 import { Services } from "./components/Services";
 import { Statistics } from "./components/Statistics";
 import { Videos } from "./components/Videos";
@@ -15,10 +14,6 @@ export default function Home() {
 
       <section id="hero" className="snap-start h-screen">
         <Hero />
-      </section>
-
-      <section id="menu" className="snap-start h-screen">
-        <MenuPage />
       </section>
 
       <section id="why-ugc" className="snap-start h-screen">

@@ -30,7 +30,7 @@ export const About = () => {
                         </p>
 
                         <p>
-                            Disfruto desde plasmar un concepto abstracto en un guion hasta verlo hecho realidad en un video dinámico. Para mí, el UGC no es solo grabar un producto; es **construir un puente de confianza real** con quien está al otro lado de la pantalla.
+                            Disfruto desde plasmar un concepto abstracto en un guion hasta verlo hecho realidad en un video dinámico. Para mí, el UGC no es solo grabar un producto; es <strong>construir un puente de confianza real</strong> con quien está al otro lado de la pantalla.
                         </p>
 
                         <p className="font-medium text-[#332A25] border-l-2 border-[#E05297] pl-4">

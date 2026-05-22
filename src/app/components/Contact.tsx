@@ -3,7 +3,7 @@ import React from 'react'
 export const Contact = () => {
     return (
         <section className="bg-[#F7F2EB] h-full flex items-center justify-center py-4 px-6 md:px-12 lg:px-20 overflow-hidden">
-            <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
 
                 {/* COLUMNA IZQUIERDA: TEXTO */}
                 <div className="space-y-6 text-[#332A25]">
@@ -41,7 +41,7 @@ export const Contact = () => {
                 </div>
 
                 {/* COLUMNA DERECHA: CTA */}
-                <div className="bg-gradient-to-br from-[#E05297] to-[#F1A7C4] rounded-[32px] p-8 md:p-10 text-white space-y-8 shadow-xl">
+                <div className="bg-gradient-to-br from-[#E05297] to-[#F1A7C4] rounded-[32px] p-5 md:p-10 text-white space-y-5 md:space-y-8 shadow-xl">
                     <div className="space-y-2">
                         <h3 className="text-2xl md:text-3xl font-serif font-bold">
                             ¡Vamos a crear algo increíble!

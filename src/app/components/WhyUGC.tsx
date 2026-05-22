@@ -40,16 +40,16 @@ export const WhyUGC = () => {
                     </p>
 
                     {/* CONTENEDOR DE ESTADÍSTICAS (BENTO STYLE) */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 pt-4">
+                    <div className="grid grid-cols-3 gap-2 md:gap-4 pt-3 md:pt-4">
                         {stats.map((stat, index) => (
                             <div
                                 key={index}
-                                className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-[#E8DFD5] shadow-sm hover:shadow-md transition-shadow duration-300"
+                                className="bg-white/60 backdrop-blur-sm p-2 md:p-4 rounded-2xl border border-[#E8DFD5] shadow-sm hover:shadow-md transition-shadow duration-300"
                             >
-                                <span className="block text-4xl font-extrabold text-[#E05297] mb-2">
+                                <span className="block text-2xl md:text-4xl font-extrabold text-[#E05297] mb-1 md:mb-2">
                                     {stat.percentage}
                                 </span>
-                                <p className="text-sm text-[#5C4E46] leading-snug">
+                                <p className="text-[11px] md:text-sm text-[#5C4E46] leading-snug">
                                     {stat.text}
                                 </p>
                             </div>

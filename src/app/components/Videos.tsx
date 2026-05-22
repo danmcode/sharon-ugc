@@ -33,7 +33,7 @@ export const Videos = () => {
             bgImage: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80',
             metrics: { views: '25.4K', likes: '1.2K', interactions: '+45%' },
             videos: [
-                { title: 'Unboxing', videoUrl: '#', thumbnail: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80' },
+                { title: 'Unboxing', videoUrl: 'https://sharonpaniquitacreadorac.my.canva.site/_assets/video/5437a07e99021597e4624219b6fee794.mp4', thumbnail: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80' },
                 { title: 'Make UP', videoUrl: '#', thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80' },
                 { title: 'Skin Care', videoUrl: '#', thumbnail: 'https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&w=400&q=80' },
             ]
@@ -75,12 +75,12 @@ export const Videos = () => {
                 </div>
 
                 {/* BOTONES / TARJETAS DE SELECCIÓN */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-3 md:gap-6">
                     {niches.map((niche) => (
                         <button
                             key={niche.id}
                             onClick={() => setActiveNiche(niche)}
-                            className="group relative h-44 md:h-56 lg:h-64 w-full rounded-3xl overflow-hidden text-left bg-[#332A25] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                            className="group relative h-28 md:h-56 lg:h-64 w-full rounded-3xl overflow-hidden text-left bg-[#332A25] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                         >
                             {/* Imagen de Fondo con Overlay */}
                             <img
@@ -92,13 +92,13 @@ export const Videos = () => {
 
                             {/* Contenido de la Tarjeta */}
                             <div className="absolute inset-0 p-6 flex flex-col justify-end space-y-2 z-10">
-                                <h3 className="text-xl font-bold text-white group-hover:text-[#F1A7C4] transition-colors">
+                                <h3 className="text-xs md:text-xl font-bold text-white group-hover:text-[#F1A7C4] transition-colors">
                                     {niche.title}
                                 </h3>
-                                <p className="text-xs text-gray-200 line-clamp-2">
+                                <p className="hidden md:block text-xs text-gray-200 line-clamp-2">
                                     {niche.tagline}
                                 </p>
-                                <span className="inline-flex items-center text-xs font-semibold text-[#F1A7C4] pt-2">
+                                <span className="hidden md:inline-flex items-center text-xs font-semibold text-[#F1A7C4] pt-2">
                                     Ver ejemplos
                                     <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -147,21 +147,49 @@ export const Videos = () => {
                                     {activeNiche.videos.map((video, idx) => (
                                         <div key={idx} className="space-y-2 text-center">
                                             <span className="text-xs font-medium text-[#332A25]">{video.title}</span>
-                                            {/* Marco de Teléfono Elegante */}
-                                            <div className="relative aspect-[9/16] bg-black rounded-[24px] border-[6px] border-[#332A25] overflow-hidden shadow-md group cursor-pointer">
-                                                <img
-                                                    src={video.thumbnail}
-                                                    alt={video.title}
-                                                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300"
-                                                />
-                                                {/* Botón de Play Simulado */}
-                                                <div className="absolute inset-0 flex items-center justify-center">
-                                                    <div className="w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-[#E05297] group-hover:scale-110 transition-transform">
-                                                        <svg className="w-5 h-5 play-icon fill-current ml-0.5" viewBox="0 0 24 24">
-                                                            <path d="M8 5v14l11-7z" />
-                                                        </svg>
-                                                    </div>
+                                            {/* Marco de Teléfono */}
+                                            <div className="relative aspect-[9/16] bg-[#1A1A1A] rounded-[40px] border-[10px] border-[#332A25] overflow-hidden shadow-2xl group">
+                                                {/* Notch / cámara */}
+                                                <div className="absolute top-0 inset-x-0 h-6 flex justify-center items-center z-30 pointer-events-none">
+                                                    <div className="w-20 h-4 bg-[#332A25] rounded-b-xl" />
                                                 </div>
+
+                                                {video.videoUrl !== '#' ? (
+                                                    <>
+                                                        <video
+                                                            src={video.videoUrl}
+                                                            poster={video.thumbnail}
+                                                            controls
+                                                            playsInline
+                                                            preload="metadata"
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-20 pointer-events-none" />
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <img
+                                                            src={video.thumbnail}
+                                                            alt={video.title}
+                                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-20 pointer-events-none" />
+                                                        <div className="absolute inset-0 flex items-center justify-center z-20">
+                                                            <div className="w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-[#E05297] group-hover:scale-110 transition-transform">
+                                                                <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                                                                    <path d="M8 5v14l11-7z" />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div className="absolute bottom-4 left-3 right-3 z-20 text-white space-y-1">
+                                                            <div className="flex items-center gap-1.5">
+                                                                <div className="w-6 h-6 rounded-full bg-white/40 backdrop-blur-sm border border-white shrink-0" />
+                                                                <span className="text-[11px] font-semibold">@sharonpaniquita</span>
+                                                            </div>
+                                                            <p className="text-[10px] text-gray-200 line-clamp-2">{video.title} ✨ #ugccreator</p>
+                                                        </div>
+                                                    </>
+                                                )}
                                             </div>
                                         </div>
                                     ))}

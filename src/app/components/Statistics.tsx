@@ -60,7 +60,7 @@ export const Statistics = () => {
                     </div>
 
                     {/* TARJETA SECUNDARIA: EL GRÁFICO DE VIRALIDAD */}
-                    <div className="md:col-span-2 bg-gradient-to-br from-[#E05297] to-[#F1A7C4] p-6 rounded-[28px] text-white flex flex-col justify-between items-center text-center shadow-md min-h-[240px]">
+                    <div className="hidden md:col-span-2 md:flex flex-col justify-between items-center text-center bg-gradient-to-br from-[#E05297] to-[#F1A7C4] p-6 rounded-[28px] text-white shadow-md min-h-[240px]">
                         <span className="text-xs font-semibold uppercase tracking-wider opacity-90">
                             Poder Viral
                         </span>
@@ -81,7 +81,7 @@ export const Statistics = () => {
                     </div>
 
                     {/* TARJETA INFERIOR: MUESTRA DE REEL INDIVIDUAL */}
-                    <div className="md:col-span-6 bg-white/50 backdrop-blur-sm p-4 rounded-2xl border border-[#E8DFD5] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs">
+                    <div className="hidden md:col-span-6 md:flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white/50 backdrop-blur-sm p-4 rounded-2xl border border-[#E8DFD5] gap-4 text-xs">
                         <div className="flex items-center gap-3">
                             <div className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
                             <p className="text-[#5C4E46]">
