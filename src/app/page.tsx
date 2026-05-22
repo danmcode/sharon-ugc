@@ -1,9 +1,12 @@
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
-import { Header } from "./components/Header";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { MenuPage } from "./components/Menu/MenuPage";
 import { Services } from "./components/Services";
+import { Statistics } from "./components/Statistics";
+import { Videos } from "./components/Videos";
+import { WhyUGC } from "./components/WhyUGC";
 
 export default function Home() {
   return (
@@ -16,6 +19,18 @@ export default function Home() {
 
       <section id="menu" className="snap-start h-screen">
         <MenuPage />
+      </section>
+
+      <section id="why-ugc" className="snap-start h-screen">
+        <WhyUGC />
+      </section>
+
+      <section id="videos" className="snap-start h-screen">
+        <Videos />
+      </section>
+
+      <section id="statistics" className="snap-start h-screen">
+        <Statistics />
       </section>
 
       <section id="about" className="snap-start h-screen">

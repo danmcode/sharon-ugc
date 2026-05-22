@@ -7,7 +7,7 @@ export const MenuPage = () => {
         <section className="
             relative 
             w-full 
-            min-h-screen 
+            h-full
             bg-[#ffacc7] 
             overflow-hidden
             pt-20
@@ -49,7 +49,7 @@ export const MenuPage = () => {
                 "
             />
             <div className="relative z-10">
-                <div className="flex md:hidden min-h-screen w-full justify-center">
+                <div className="flex md:hidden h-full w-full justify-center">
                     <MobileMenu />
                 </div>
 
