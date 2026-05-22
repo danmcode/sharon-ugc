@@ -1,19 +1,27 @@
 "use client";
 import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import profilePic from "../../../public/images/profile_photo.jpeg";
+import sharonUgcBeauty from "../../../public/images/sharon_ugc_beauty.png";
+import sharonUgcUnboxing from "../../../public/images/sharon_ugc_unboxing.jpg";
+import makeupImg from "../../../public/images/makeup_valentines_day_image.jpg";
+import sharonUgcSkincare from "../../../public/images/sharon_ugc_skincare.jpg";
+import sharonUgcMiniVlog from "../../../public/images/sharon_ugc_mini_vlog.jpg";
+import sharonUgcViajes from "../../../public/images/sharon_ugc_viajes.jpg";
+import sharonUgcResenas from "../../../public/images/sharon_ugc_resenas.jpg";
 
 interface VideoProject {
     title: string;
     videoUrl: string;
-    thumbnail: string;
+    thumbnail: StaticImageData;
 }
 
 interface NicheData {
     id: string;
     title: string;
     tagline: string;
-    bgImage: string; // Una foto estética de fondo para el botón/tarjeta
+    bgImage: StaticImageData;
     metrics: {
         views: string;
         likes: string;
@@ -30,32 +38,32 @@ export const Videos = () => {
             id: 'beauty',
             title: 'Beauty, Unboxing & Skincare',
             tagline: 'Rutinas, reseñas de productos y estética limpia.',
-            bgImage: '/images/sharon_ugc_beauty.png',
+            bgImage: sharonUgcBeauty,
             metrics: { views: '25.4K', likes: '1.2K', interactions: '+45%' },
             videos: [
-                { title: 'Unboxing', videoUrl: 'https://sharonpaniquitacreadorac.my.canva.site/_assets/video/5437a07e99021597e4624219b6fee794.mp4', thumbnail: '/images/sharon_ugc_unboxing.jpg' },
-                { title: 'Make UP', videoUrl: '#', thumbnail: '/images/makeup_valentines_day_image.jpg' },
-                { title: 'Skin Care', videoUrl: '#', thumbnail: '/images/sharon_ugc_skincare.jpg' },
+                { title: 'Unboxing', videoUrl: 'https://sharonpaniquitacreadorac.my.canva.site/_assets/video/5437a07e99021597e4624219b6fee794.mp4', thumbnail: sharonUgcUnboxing },
+                { title: 'Make UP', videoUrl: '#', thumbnail: makeupImg },
+                { title: 'Skin Care', videoUrl: '#', thumbnail: sharonUgcSkincare },
             ]
         },
         {
             id: 'lifestyle',
             title: 'Lifestyle & Storytelling',
             tagline: 'Vlogs dinámicos y conexiones cotidianas reales.',
-            bgImage: '/images/sharon_ugc_mini_vlog.jpg',
+            bgImage: sharonUgcMiniVlog,
             metrics: { views: '17.8K', likes: '847', interactions: '+32%' },
             videos: [
-                { title: 'Mini Vlog', videoUrl: '#', thumbnail: '/images/sharon_ugc_mini_vlog.jpg' }
+                { title: 'Mini Vlog', videoUrl: '#', thumbnail: sharonUgcMiniVlog }
             ]
         },
         {
             id: 'travel',
             title: 'Viajes & Reseñas de Comida',
             tagline: 'Experiencias visuales, spots gastronómicos y aventura.',
-            bgImage: '/images/sharon_ugc_viajes.jpg',
+            bgImage: sharonUgcViajes,
             metrics: { views: '42.1K', likes: '3.1K', interactions: '+58%' },
             videos: [
-                { title: 'Food Review', videoUrl: '#', thumbnail: '/images/sharon_ugc_resenas.jpg' }
+                { title: 'Food Review', videoUrl: '#', thumbnail: sharonUgcResenas }
             ]
         }
     ];
@@ -83,10 +91,12 @@ export const Videos = () => {
                             className="group relative h-28 md:h-56 lg:h-64 w-full rounded-3xl overflow-hidden text-left bg-[#332A25] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                         >
                             {/* Imagen de Fondo con Overlay */}
-                            <img
+                            <Image
                                 src={niche.bgImage}
                                 alt={niche.title}
-                                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-30 group-hover:scale-105 transition-all duration-500"
+                                fill
+                                sizes="(max-width: 768px) 33vw, 33vw"
+                                className="absolute inset-0 object-cover opacity-40 group-hover:opacity-30 group-hover:scale-105 transition-all duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#332A25] via-[#332A25]/40 to-transparent" />
 
@@ -158,7 +168,7 @@ export const Videos = () => {
                                                     <>
                                                         <video
                                                             src={video.videoUrl}
-                                                            poster={video.thumbnail}
+                                                            poster={video.thumbnail.src}
                                                             controls
                                                             playsInline
                                                             preload="metadata"
@@ -168,10 +178,12 @@ export const Videos = () => {
                                                     </>
                                                 ) : (
                                                     <>
-                                                        <img
+                                                        <Image
                                                             src={video.thumbnail}
                                                             alt={video.title}
-                                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                            fill
+                                                            sizes="(max-width: 640px) 100vw, 33vw"
+                                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                                                         />
                                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-20 pointer-events-none" />
                                                         <div className="absolute inset-0 flex items-center justify-center z-20">

@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "./FadeUp";
 import Image from "next/image";
+import sharonImg from "../../../../public/images/sharon.png";
+import ateneaImg from "../../../../public/images/atenea.png";
+import aveneImg from "../../../../public/images/avene.png";
+import ancestralImg from "../../../../public/images/ancestral.png";
+import brochasImg from "../../../../public/images/brochas.png";
 
 export const HeroImage = () => {
     return (
@@ -24,7 +29,7 @@ export const HeroImage = () => {
                 className="absolute bottom-0 z-5"
             >
                 <Image
-                    src="/images/sharon.png"
+                    src={sharonImg}
                     alt="Sharon"
                     width={500}
                     height={500}
@@ -39,7 +44,7 @@ export const HeroImage = () => {
                 className="absolute top-[18%] left-[15%]"
             >
                 <Image
-                    src="/images/atenea.png"
+                    src={ateneaImg}
                     alt=""
                     width={80}
                     height={80}
@@ -54,7 +59,7 @@ export const HeroImage = () => {
                 className="absolute top-[20%] right-[30%]"
             >
                 <Image
-                    src="/images/avene.png"
+                    src={aveneImg}
                     alt=""
                     width={45}
                     height={45}
@@ -69,7 +74,7 @@ export const HeroImage = () => {
                 className="absolute top-[36%] right-[2%]"
             >
                 <Image
-                    src="/images/ancestral.png"
+                    src={ancestralImg}
                     alt=""
                     width={70}
                     height={70}
@@ -85,7 +90,7 @@ export const HeroImage = () => {
                 className="absolute bottom-[0%] right-[0%]"
             >
                 <Image
-                    src="/images/brochas.png"
+                    src={brochasImg}
                     alt=""
                     width={90}
                     height={90}

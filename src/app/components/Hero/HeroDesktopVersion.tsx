@@ -1,4 +1,5 @@
 import Image from "next/image"
+import heartLinesImg from "../../../../public/images/heart_lines.svg";
 import { HeroImage } from "./HeroImage"
 import { HeroTitle } from "./HeroTitle"
 
@@ -7,7 +8,7 @@ export const HeroDesktopVersion = () => {
     return (
         <section className="relative w-fill h-screen overflow-hidden">
             <Image
-                src="/images/heart_lines.svg"
+                src={heartLinesImg}
                 alt="background left"
                 fill
                 className="
@@ -29,7 +30,7 @@ export const HeroDesktopVersion = () => {
             </div>
 
             <Image
-                src="/images/heart_lines.svg"
+                src={heartLinesImg}
                 alt="background right"
                 fill
                 className="

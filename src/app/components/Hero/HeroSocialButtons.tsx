@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "./FadeUp";
 import Image from "next/image";
+import tikTokImg from "../../../../public/images/tik-tok.png";
+import instagramImg from "../../../../public/images/instagram.png";
+import socialImg from "../../../../public/images/social.png";
 
 export const HeroSocialButtons = () => {
     return (
@@ -27,7 +30,7 @@ export const HeroSocialButtons = () => {
                     rel="noopener noreferrer"
                 >
                     <Image
-                        src="/images/tik-tok.png"
+                        src={tikTokImg}
                         alt=""
                         width={40}
                         height={40}
@@ -40,7 +43,7 @@ export const HeroSocialButtons = () => {
                     rel="noopener noreferrer"
                 >
                     <Image
-                        src="/images/instagram.png"
+                        src={instagramImg}
                         alt=""
                         width={40}
                         height={40}
@@ -53,7 +56,7 @@ export const HeroSocialButtons = () => {
                     rel="noopener noreferrer"
                 >
                     <Image
-                        src="/images/social.png"
+                        src={socialImg}
                         alt=""
                         width={40}
                         height={40}
